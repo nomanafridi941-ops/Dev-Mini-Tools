@@ -21,6 +21,14 @@ import HtmlEncoder from './pages/HtmlEncoder';
 import RegexCheatSheet from './pages/RegexCheatSheet';
 import LoremIpsum from './pages/LoremIpsum';
 import TextDiffTool from './pages/TextDiffTool';
+import MetaTagGenerator from './pages/MetaTagGenerator';
+import RobotsTxtGenerator from './pages/RobotsTxtGenerator';
+import SitemapGenerator from './pages/SitemapGenerator';
+import OpenGraphGenerator from './pages/OpenGraphGenerator';
+import ImageToBase64 from './pages/ImageToBase64';
+import Base64ToImage from './pages/Base64ToImage';
+import CssGradientGenerator from './pages/CssGradientGenerator';
+import BoxShadowGenerator from './pages/BoxShadowGenerator';
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
@@ -72,8 +80,8 @@ const Navbar = () => {
               </button>
 
               {isToolsOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[48rem] rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 shadow-2xl shadow-slate-900/10 backdrop-blur-lg z-50">
-                  <div className="px-3 pb-3 grid grid-cols-1 md:grid-cols-3 gap-2">
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[64rem] rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 shadow-2xl shadow-slate-900/10 backdrop-blur-lg z-50">
+                  <div className="px-3 pb-3 grid grid-cols-1 md:grid-cols-4 gap-2">
                     <div>
                       <p className="px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400">Code & Format</p>
                       {[{ to: '/json-formatter', label: 'JSON Formatter / Minifier' }, { to: '/html-beautifier', label: 'HTML Beautifier' }, { to: '/html-minifier', label: 'HTML Minifier' }, { to: '/css-formatter', label: 'CSS Formatter' }, { to: '/css-minifier', label: 'CSS Minifier' }, { to: '/js-beautifier', label: 'JS Beautifier' }, { to: '/js-minifier', label: 'JS Minifier' }].map((item) => (
@@ -95,6 +103,24 @@ const Navbar = () => {
                     <div>
                       <p className="px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400">Developer Utilities</p>
                       {[{ to: '/regex-tester', label: 'Regex Tester' }, { to: '/regex-cheats', label: 'Regex Cheat Sheet' }, { to: '/text-case', label: 'Case Converter' }, { to: '/lorem-ipsum', label: 'Lorem Ipsum' }, { to: '/text-diff', label: 'Text Diff Checker' }, { to: '/uuid-generator', label: 'UUID Generator' }, { to: '/jwt-decoder', label: 'JWT Decoder' }, { to: '/timestamp-converter', label: 'Timestamp Converter' }, { to: '/color-converter', label: 'Color Converter' }].map((item) => (
+                        <Link key={item.to} to={item.to} onClick={() => setIsToolsOpen(false)} className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-900 transition-colors">
+                          <span>{item.label}</span>
+                          <i className="fas fa-arrow-right text-xs opacity-60"></i>
+                        </Link>
+                      ))}
+                    </div>
+                    <div>
+                      <p className="px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400">SEO Tools</p>
+                      {[{ to: '/meta-tags', label: 'Meta Tag Generator' }, { to: '/robots-txt', label: 'robots.txt Generator' }, { to: '/sitemap-xml', label: 'Sitemap XML Generator' }, { to: '/open-graph', label: 'Open Graph Generator' }].map((item) => (
+                        <Link key={item.to} to={item.to} onClick={() => setIsToolsOpen(false)} className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-900 transition-colors">
+                          <span>{item.label}</span>
+                          <i className="fas fa-arrow-right text-xs opacity-60"></i>
+                        </Link>
+                      ))}
+                    </div>
+                    <div>
+                      <p className="px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400">Image & UI Helpers</p>
+                      {[{ to: '/image-to-base64', label: 'Image to Base64' }, { to: '/base64-to-image', label: 'Base64 to Image' }, { to: '/css-gradient', label: 'CSS Gradient Generator' }, { to: '/box-shadow', label: 'Box Shadow Generator' }, { to: '/color-converter', label: 'Color Converter' }].map((item) => (
                         <Link key={item.to} to={item.to} onClick={() => setIsToolsOpen(false)} className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-900 transition-colors">
                           <span>{item.label}</span>
                           <i className="fas fa-arrow-right text-xs opacity-60"></i>
@@ -183,6 +209,14 @@ const App: React.FC = () => {
             <Route path="/lorem-ipsum" element={<LoremIpsum />} />
             <Route path="/text-diff" element={<TextDiffTool />} />
             <Route path="/color-converter" element={<ColorConverter />} />
+            <Route path="/meta-tags" element={<MetaTagGenerator />} />
+            <Route path="/robots-txt" element={<RobotsTxtGenerator />} />
+            <Route path="/sitemap-xml" element={<SitemapGenerator />} />
+            <Route path="/open-graph" element={<OpenGraphGenerator />} />
+            <Route path="/image-to-base64" element={<ImageToBase64 />} />
+            <Route path="/base64-to-image" element={<Base64ToImage />} />
+            <Route path="/css-gradient" element={<CssGradientGenerator />} />
+            <Route path="/box-shadow" element={<BoxShadowGenerator />} />
           </Routes>
         </main>
         <Footer />

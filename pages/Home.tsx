@@ -93,6 +93,46 @@ const Home: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
         <div className="flex items-center justify-between">
           <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Phase 2 · SEO + Web Dev Power</p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Traffic & UI helper tools</h2>
+          </div>
+          <span className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-900 text-white text-xs uppercase tracking-[0.25em]">Boost SEO</span>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">SEO Tools</h3>
+            <div className="grid grid-cols-1 gap-8">
+              <ToolCard title="Meta Tag Generator" description="Create essential SEO meta tags." icon="fa-tags" to="/meta-tags" color="bg-emerald-200" />
+              <ToolCard title="robots.txt Generator" description="Control crawler access." icon="fa-robot" to="/robots-txt" color="bg-slate-200" />
+              <ToolCard title="Sitemap XML Generator" description="Build sitemap.xml from paths." icon="fa-sitemap" to="/sitemap-xml" color="bg-yellow-200" />
+              <ToolCard title="Open Graph Generator" description="OG + Twitter card tags." icon="fa-share-square" to="/open-graph" color="bg-sky-200" />
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Image & UI Helpers</h3>
+            <div className="grid grid-cols-1 gap-8">
+              <ToolCard title="Image to Base64" description="Convert images to data URLs." icon="fa-file-image" to="/image-to-base64" color="bg-pink-200" />
+              <ToolCard title="Base64 to Image" description="Preview and download images." icon="fa-image" to="/base64-to-image" color="bg-purple-200" />
+              <ToolCard title="CSS Gradient Generator" description="Design linear/radial gradients." icon="fa-fill" to="/css-gradient" color="bg-indigo-200" />
+              <ToolCard title="Box Shadow Generator" description="Fine-tune modern shadows." icon="fa-square" to="/box-shadow" color="bg-orange-200" />
+              <ToolCard title="Color Converter" description="HEX ⇄ RGB ⇄ HSL." icon="fa-palette" to="/color-converter" color="bg-teal-200" />
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">More coming soon</h3>
+            <div className="grid grid-cols-1 gap-8">
+              <div className="p-6 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">More SEO/UI helpers will land here.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+        <div className="flex items-center justify-between">
+          <div>
             <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Phase 1 · Core Tools</p>
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Category-wise tools for faster work</h2>
           </div>
