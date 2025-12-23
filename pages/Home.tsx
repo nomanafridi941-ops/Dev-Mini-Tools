@@ -90,35 +90,50 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex items-center justify-between mb-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+        <div className="flex items-center justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Pick a tool</p>
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Everything you need, nothing you don't.</h2>
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Phase 1 · Core Tools</p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Category-wise tools for faster work</h2>
           </div>
           <span className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-900 text-white text-xs uppercase tracking-[0.25em]">Always free</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ToolCard title="JSON Formatter" description="Beautify, minify and validate JSON data." icon="fa-brackets-curly" to="/json-formatter" color="bg-brand-100" />
-          <ToolCard title="CSS Formatter" description="Indent and clean CSS quickly." icon="fa-brush" to="/css-formatter" color="bg-violet-200" />
-          <ToolCard title="CSS Minifier" description="Compress CSS for production." icon="fa-css3-alt" to="/css-minifier" color="bg-glow-500/40" />
-          <ToolCard title="HTML Beautifier" description="Format messy HTML into clean, readable code." icon="fa-code" to="/html-beautifier" color="bg-amber-200" />
-          <ToolCard title="HTML Minifier" description="Remove comments and collapse whitespace." icon="fa-compress" to="/html-minifier" color="bg-yellow-200" />
-          <ToolCard title="JS Beautifier" description="Prettify JS/TS using Prettier." icon="fa-code-branch" to="/js-beautifier" color="bg-sky-200" />
-          <ToolCard title="JS Minifier" description="Minify JavaScript with Terser." icon="fa-bolt" to="/js-minifier" color="bg-indigo-200" />
-          <ToolCard title="Base64 Encoder" description="Encode/decode Base64 instantly." icon="fa-exchange-alt" to="/base64-encoder-decoder" color="bg-emerald-200" />
-          <ToolCard title="URL Encoder" description="Encode or decode URLs safely." icon="fa-link" to="/url-encoder" color="bg-indigo-200" />
-          <ToolCard title="HTML Encode/Decode" description="Escape or unescape HTML entities." icon="fa-shield-virus" to="/html-encoder" color="bg-slate-200" />
-          <ToolCard title="Regex Tester" description="Test regex with live highlights." icon="fa-search" to="/regex-tester" color="bg-pink-200" />
-          <ToolCard title="Regex Cheat Sheet" description="Quick reference for common tokens." icon="fa-list" to="/regex-cheats" color="bg-orange-200" />
-          <ToolCard title="Case Converter" description="Switch between upper, lower, snake, kebab." icon="fa-text-height" to="/text-case" color="bg-blue-200" />
-          <ToolCard title="Lorem Ipsum" description="Generate placeholder paragraphs." icon="fa-align-left" to="/lorem-ipsum" color="bg-purple-200" />
-          <ToolCard title="Text Diff" description="Compare two texts and highlight changes." icon="fa-not-equal" to="/text-diff" color="bg-red-200" />
-          <ToolCard title="UUID Generator" description="Create multiple v4 UUIDs instantly." icon="fa-fingerprint" to="/uuid-generator" color="bg-lime-200" />
-          <ToolCard title="JWT Decoder" description="Decode JWT header and payload locally." icon="fa-shield-alt" to="/jwt-decoder" color="bg-cyan-200" />
-          <ToolCard title="Timestamp Converter" description="Convert Unix seconds/millis and ISO." icon="fa-clock" to="/timestamp-converter" color="bg-rose-200" />
-          <ToolCard title="Color Converter" description="Convert HEX, RGB, and HSL with preview." icon="fa-palette" to="/color-converter" color="bg-teal-200" />
-          <ToolCard title="More coming soon" description="We add compact utilities based on feedback." icon="fa-plus-circle" to="/" color="bg-slate-200" />
+
+        <div className="space-y-6">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white">Code & Format</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ToolCard title="JSON Formatter / Minifier" description="Beautify and compact JSON quickly." icon="fa-brackets-curly" to="/json-formatter" color="bg-brand-100" />
+            <ToolCard title="HTML Beautifier" description="Make HTML readable with proper indent." icon="fa-code" to="/html-beautifier" color="bg-amber-200" />
+            <ToolCard title="HTML Minifier" description="Strip comments and collapse whitespace." icon="fa-compress" to="/html-minifier" color="bg-yellow-200" />
+            <ToolCard title="CSS Formatter" description="Indent and clean CSS for readability." icon="fa-brush" to="/css-formatter" color="bg-violet-200" />
+            <ToolCard title="CSS Minifier" description="Compress CSS for production." icon="fa-css3-alt" to="/css-minifier" color="bg-glow-500/40" />
+            <ToolCard title="JS Beautifier" description="Prettify JS/TS using Prettier." icon="fa-code-branch" to="/js-beautifier" color="bg-sky-200" />
+            <ToolCard title="JS Minifier" description="Minify JavaScript with Terser." icon="fa-bolt" to="/js-minifier" color="bg-indigo-200" />
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white">Encode / Decode</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ToolCard title="Base64 Encoder / Decoder" description="Convert strings to/from Base64." icon="fa-exchange-alt" to="/base64-encoder-decoder" color="bg-emerald-200" />
+            <ToolCard title="URL Encoder / Decoder" description="Safely encode/decode URLs and params." icon="fa-link" to="/url-encoder" color="bg-indigo-200" />
+            <ToolCard title="HTML Encode / Decode" description="Escape or unescape HTML entities." icon="fa-shield-virus" to="/html-encoder" color="bg-slate-200" />
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white">Developer Utilities</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ToolCard title="Regex Tester" description="Test regex with live highlights." icon="fa-search" to="/regex-tester" color="bg-pink-200" />
+            <ToolCard title="Regex Cheat Sheet" description="Quick reference for common tokens." icon="fa-list" to="/regex-cheats" color="bg-orange-200" />
+            <ToolCard title="Case Converter" description="Upper, lower, snake, kebab cases." icon="fa-text-height" to="/text-case" color="bg-blue-200" />
+            <ToolCard title="Lorem Ipsum Generator" description="Generate placeholder paragraphs." icon="fa-align-left" to="/lorem-ipsum" color="bg-purple-200" />
+            <ToolCard title="Text Diff Checker" description="Compare two texts and highlight changes." icon="fa-not-equal" to="/text-diff" color="bg-red-200" />
+            <ToolCard title="UUID Generator" description="Create multiple v4 UUIDs instantly." icon="fa-fingerprint" to="/uuid-generator" color="bg-lime-200" />
+            <ToolCard title="JWT Decoder" description="Decode JWT header and payload locally." icon="fa-shield-alt" to="/jwt-decoder" color="bg-cyan-200" />
+            <ToolCard title="Timestamp Converter" description="Convert Unix seconds/millis and ISO." icon="fa-clock" to="/timestamp-converter" color="bg-rose-200" />
+            <ToolCard title="Color Converter" description="Convert HEX, RGB, and HSL with preview." icon="fa-palette" to="/color-converter" color="bg-teal-200" />
+          </div>
         </div>
       </section>
 
