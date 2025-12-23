@@ -155,6 +155,25 @@ const Home: React.FC = () => {
               <ToolCard title="Color Converter" description="Convert HEX, RGB, and HSL with preview." icon="fa-palette" to="/color-converter" color="bg-teal-200" />
             </div>
           </div>
+
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">API & Data</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <ToolCard title="JSON to CSV Converter" description="Export JSON arrays as CSV." icon="fa-table" to="/json-to-csv" color="bg-green-200" />
+              <ToolCard title="CSV to JSON Converter" description="Parse CSV to JSON arrays." icon="fa-brackets-curly" to="/csv-to-json" color="bg-blue-200" />
+              <ToolCard title="XML to JSON Converter" description="Convert XML to JSON." icon="fa-code" to="/xml-to-json" color="bg-amber-200" />
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Security & Productivity</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <ToolCard title="Password Generator" description="Generate strong passwords." icon="fa-key" to="/password-generator" color="bg-red-200" />
+              <ToolCard title="Hash Generator" description="MD5, SHA-1, SHA-256 hashes." icon="fa-hashtag" to="/hash-generator" color="bg-purple-200" />
+              <ToolCard title="Minify All" description="Minify HTML, CSS, JS together." icon="fa-compress-alt" to="/minify-all" color="bg-indigo-200" />
+              <ToolCard title="Code Snippet Manager" description="Save and organize snippets." icon="fa-save" to="/code-snippets" color="bg-teal-200" />
+            </div>
+          </div>
         </div>
       </section>
 
