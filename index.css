@@ -1,0 +1,50 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.09), transparent 32%),
+    radial-gradient(circle at 82% 6%, rgba(34, 211, 238, 0.12), transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2ff 32%, #f8fafc 64%);
+}
+
+.dark body {
+  color-scheme: dark;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.14), transparent 30%),
+    radial-gradient(circle at 82% 6%, rgba(34, 211, 238, 0.16), transparent 28%),
+    linear-gradient(180deg, #0b1224 0%, #0f172a 32%, #0b1224 64%);
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.18);
+  color: #0b1021;
+}
+
+.dark ::selection {
+  background: rgba(34, 211, 238, 0.25);
+  color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c3aed, #06b6d4);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6d28d9, #0891b2);
+}
