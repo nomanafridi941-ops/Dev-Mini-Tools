@@ -13,6 +13,14 @@ import TimestampTool from './pages/TimestampTool';
 import UrlEncoder from './pages/UrlEncoder';
 import TextCaseTool from './pages/TextCaseTool';
 import ColorConverter from './pages/ColorConverter';
+import HtmlMinifier from './pages/HtmlMinifier';
+import CssFormatter from './pages/CssFormatter';
+import JsBeautifier from './pages/JsBeautifier';
+import JsMinifier from './pages/JsMinifier';
+import HtmlEncoder from './pages/HtmlEncoder';
+import RegexCheatSheet from './pages/RegexCheatSheet';
+import LoremIpsum from './pages/LoremIpsum';
+import TextDiffTool from './pages/TextDiffTool';
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
@@ -67,15 +75,23 @@ const Navbar = () => {
                 <div className="absolute left-0 top-full pt-3 w-52 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 shadow-2xl shadow-slate-900/10 backdrop-blur-lg p-2 z-50">
                   {[
                     { to: '/json-formatter', label: 'JSON Formatter' },
+                    { to: '/css-formatter', label: 'CSS Formatter' },
                     { to: '/css-minifier', label: 'CSS Minifier' },
                     { to: '/html-beautifier', label: 'HTML Beautifier' },
-                    { to: '/base64-encoder-decoder', label: 'Base64 Encoder' },
+                    { to: '/html-minifier', label: 'HTML Minifier' },
+                    { to: '/js-beautifier', label: 'JS Beautifier' },
+                    { to: '/js-minifier', label: 'JS Minifier' },
+                    { to: '/base64-encoder-decoder', label: 'Base64 Encoder/Decoder' },
+                    { to: '/url-encoder', label: 'URL Encoder/Decoder' },
+                    { to: '/html-encoder', label: 'HTML Encode/Decode' },
                     { to: '/regex-tester', label: 'Regex Tester' },
+                    { to: '/regex-cheats', label: 'Regex Cheat Sheet' },
                     { to: '/uuid-generator', label: 'UUID Generator' },
                     { to: '/jwt-decoder', label: 'JWT Decoder' },
                     { to: '/timestamp-converter', label: 'Timestamp Converter' },
-                    { to: '/url-encoder', label: 'URL Encoder' },
-                    { to: '/text-case', label: 'Text Case' },
+                    { to: '/text-case', label: 'Case Converter' },
+                    { to: '/lorem-ipsum', label: 'Lorem Ipsum' },
+                    { to: '/text-diff', label: 'Text Diff Checker' },
                     { to: '/color-converter', label: 'Color Converter' },
                   ].map((item) => (
                     <Link
@@ -151,15 +167,23 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/json-formatter" element={<JsonFormatter />} />
+            <Route path="/css-formatter" element={<CssFormatter />} />
             <Route path="/css-minifier" element={<CssMinifier />} />
             <Route path="/html-beautifier" element={<HtmlBeautifier />} />
+            <Route path="/html-minifier" element={<HtmlMinifier />} />
+            <Route path="/js-beautifier" element={<JsBeautifier />} />
+            <Route path="/js-minifier" element={<JsMinifier />} />
             <Route path="/base64-encoder-decoder" element={<Base64Tool />} />
+            <Route path="/url-encoder" element={<UrlEncoder />} />
+            <Route path="/html-encoder" element={<HtmlEncoder />} />
             <Route path="/regex-tester" element={<RegexTester />} />
+            <Route path="/regex-cheats" element={<RegexCheatSheet />} />
             <Route path="/uuid-generator" element={<UuidTool />} />
             <Route path="/jwt-decoder" element={<JwtDecoder />} />
             <Route path="/timestamp-converter" element={<TimestampTool />} />
-            <Route path="/url-encoder" element={<UrlEncoder />} />
             <Route path="/text-case" element={<TextCaseTool />} />
+            <Route path="/lorem-ipsum" element={<LoremIpsum />} />
+            <Route path="/text-diff" element={<TextDiffTool />} />
             <Route path="/color-converter" element={<ColorConverter />} />
           </Routes>
         </main>
