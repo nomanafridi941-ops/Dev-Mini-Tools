@@ -93,13 +93,11 @@ const Home: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Phase 2 · SEO + Web Dev Power</p>
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Traffic & UI helper tools</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Tools by Category</h2>
           </div>
-          <span className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-900 text-white text-xs uppercase tracking-[0.25em]">Boost SEO</span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-7xl mx-auto justify-items-center">
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">SEO Tools</h3>
             <div className="grid grid-cols-1 gap-8">
@@ -121,25 +119,6 @@ const Home: React.FC = () => {
             </div>
           </div>
 
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white">More coming soon</h3>
-            <div className="grid grid-cols-1 gap-8">
-              <div className="p-6 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400">More SEO/UI helpers will land here.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Phase 1 · Core Tools</p>
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Category-wise tools for faster work</h2>
-          </div>
-          <span className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-900 text-white text-xs uppercase tracking-[0.25em]">Always free</span>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Code & Format</h3>
             <div className="grid grid-cols-1 gap-8">
@@ -178,6 +157,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      
 
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="rounded-3xl bg-white/85 dark:bg-slate-950/80 backdrop-blur-xl border border-slate-200 dark:border-slate-800 p-10 shadow-xl shadow-brand-500/10 text-left space-y-4">
