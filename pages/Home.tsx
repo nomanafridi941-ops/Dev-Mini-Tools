@@ -100,7 +100,7 @@ const Home: React.FC = () => {
         <div className="grid grid-cols-1 gap-12 max-w-6xl mx-auto">
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">SEO Tools</h3>
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <ToolCard title="Meta Tag Generator" description="Create essential SEO meta tags." icon="fa-tags" to="/meta-tags" color="bg-emerald-200" />
               <ToolCard title="robots.txt Generator" description="Control crawler access." icon="fa-robot" to="/robots-txt" color="bg-slate-200" />
               <ToolCard title="Sitemap XML Generator" description="Build sitemap.xml from paths." icon="fa-sitemap" to="/sitemap-xml" color="bg-yellow-200" />
@@ -110,7 +110,7 @@ const Home: React.FC = () => {
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Image & UI Helpers</h3>
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <ToolCard title="Image to Base64" description="Convert images to data URLs." icon="fa-file-image" to="/image-to-base64" color="bg-pink-200" />
               <ToolCard title="Base64 to Image" description="Preview and download images." icon="fa-image" to="/base64-to-image" color="bg-purple-200" />
               <ToolCard title="CSS Gradient Generator" description="Design linear/radial gradients." icon="fa-fill" to="/css-gradient" color="bg-indigo-200" />
@@ -121,7 +121,7 @@ const Home: React.FC = () => {
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Code & Format</h3>
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <ToolCard title="JSON Formatter / Minifier" description="Beautify and compact JSON quickly." icon="fa-brackets-curly" to="/json-formatter" color="bg-brand-100" />
               <ToolCard title="HTML Beautifier" description="Make HTML readable with proper indent." icon="fa-code" to="/html-beautifier" color="bg-amber-200" />
               <ToolCard title="HTML Minifier" description="Strip comments and collapse whitespace." icon="fa-compress" to="/html-minifier" color="bg-yellow-200" />
@@ -134,7 +134,7 @@ const Home: React.FC = () => {
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Encode / Decode</h3>
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <ToolCard title="Base64 Encoder / Decoder" description="Convert strings to/from Base64." icon="fa-exchange-alt" to="/base64-encoder-decoder" color="bg-emerald-200" />
               <ToolCard title="URL Encoder / Decoder" description="Safely encode/decode URLs and params." icon="fa-link" to="/url-encoder" color="bg-indigo-200" />
               <ToolCard title="HTML Encode / Decode" description="Escape or unescape HTML entities." icon="fa-shield-virus" to="/html-encoder" color="bg-slate-200" />
@@ -143,7 +143,7 @@ const Home: React.FC = () => {
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Developer Utilities</h3>
-            <div className="grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <ToolCard title="Regex Tester" description="Test regex with live highlights." icon="fa-search" to="/regex-tester" color="bg-pink-200" />
               <ToolCard title="Regex Cheat Sheet" description="Quick reference for common tokens." icon="fa-list" to="/regex-cheats" color="bg-orange-200" />
               <ToolCard title="Case Converter" description="Upper, lower, snake, kebab cases." icon="fa-text-height" to="/text-case" color="bg-blue-200" />
