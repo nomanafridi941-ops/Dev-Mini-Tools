@@ -6,8 +6,6 @@
     </linearGradient>
   </defs>
   <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#g)"/>
-  <g fill="#fff">
-    <path d="M24 40h-2a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h2l2-4h12l2 4h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2l-2 4H26l-2-4zm4-12-2 4v6l2 4h8l2-4v-6l-2-4h-8z" opacity="0.9"/>
-    <text x="32" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" opacity="0.95">DMT</text>
-  </g>
+  <!-- Lightning bolt icon to match navbar logo -->
+  <path d="M34 14 L26 30 H32 L28 50 L46 26 H36 L40 14 Z" fill="#ffffff"/>
 </svg>
