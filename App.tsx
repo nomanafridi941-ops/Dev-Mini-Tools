@@ -72,7 +72,7 @@ const Navbar = () => {
               </button>
 
               {isToolsOpen && (
-                <div className="absolute left-0 top-full pt-3 w-[48rem] rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 shadow-2xl shadow-slate-900/10 backdrop-blur-lg z-50">
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[48rem] rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 shadow-2xl shadow-slate-900/10 backdrop-blur-lg z-50">
                   <div className="px-3 pb-3 grid grid-cols-1 md:grid-cols-3 gap-2">
                     <div>
                       <p className="px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400">Code & Format</p>

@@ -99,7 +99,7 @@ const Home: React.FC = () => {
           <span className="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-900 text-white text-xs uppercase tracking-[0.25em]">Always free</span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Code & Format</h3>
             <div className="grid grid-cols-1 gap-8">
