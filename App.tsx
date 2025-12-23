@@ -36,6 +36,12 @@ import PasswordGenerator from './pages/PasswordGenerator';
 import HashGenerator from './pages/HashGenerator';
 import MinifyAll from './pages/MinifyAll';
 import CodeSnippetManager from './pages/CodeSnippetManager';
+import ApiRequestTester from './pages/ApiRequestTester';
+import HttpStatusChecker from './pages/HttpStatusChecker';
+import MarkdownToHtml from './pages/MarkdownToHtml';
+import HtmlToMarkdown from './pages/HtmlToMarkdown';
+import SqlFormatter from './pages/SqlFormatter';
+import CronJobGenerator from './pages/CronJobGenerator';
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
@@ -149,6 +155,13 @@ const Navbar = () => {
                           <i className="fas fa-arrow-right text-xs opacity-60"></i>
                         </Link>
                       ))}
+                      <p className="px-2 py-1 mt-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-400">Bonus Tools</p>
+                      {[{ to: '/api-tester', label: 'API Request Tester' }, { to: '/http-status', label: 'HTTP Status Checker' }, { to: '/md-to-html', label: 'Markdown to HTML' }, { to: '/html-to-md', label: 'HTML to Markdown' }, { to: '/sql-formatter', label: 'SQL Formatter' }, { to: '/cron-generator', label: 'Cron Job Generator' }].map((item) => (
+                        <Link key={item.to} to={item.to} onClick={() => setIsToolsOpen(false)} className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-900 transition-colors">
+                          <span>{item.label}</span>
+                          <i className="fas fa-arrow-right text-xs opacity-60"></i>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -247,6 +260,12 @@ const App: React.FC = () => {
             <Route path="/hash-generator" element={<HashGenerator />} />
             <Route path="/minify-all" element={<MinifyAll />} />
             <Route path="/code-snippets" element={<CodeSnippetManager />} />
+            <Route path="/api-tester" element={<ApiRequestTester />} />
+            <Route path="/http-status" element={<HttpStatusChecker />} />
+            <Route path="/md-to-html" element={<MarkdownToHtml />} />
+            <Route path="/html-to-md" element={<HtmlToMarkdown />} />
+            <Route path="/sql-formatter" element={<SqlFormatter />} />
+            <Route path="/cron-generator" element={<CronJobGenerator />} />
           </Routes>
         </main>
         <Footer />

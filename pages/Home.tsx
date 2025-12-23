@@ -174,6 +174,18 @@ const Home: React.FC = () => {
               <ToolCard title="Code Snippet Manager" description="Save and organize snippets." icon="fa-save" to="/code-snippets" color="bg-teal-200" />
             </div>
           </div>
+
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Bonus Tools</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <ToolCard title="API Request Tester" description="Test REST APIs with custom headers." icon="fa-plug" to="/api-tester" color="bg-cyan-200" />
+              <ToolCard title="HTTP Status Checker" description="Reference for HTTP status codes." icon="fa-exclamation-circle" to="/http-status" color="bg-yellow-200" />
+              <ToolCard title="Markdown to HTML" description="Convert Markdown to HTML." icon="fa-file-code" to="/md-to-html" color="bg-green-200" />
+              <ToolCard title="HTML to Markdown" description="Convert HTML to Markdown." icon="fa-code" to="/html-to-md" color="bg-blue-200" />
+              <ToolCard title="SQL Formatter" description="Format SQL with indentation." icon="fa-database" to="/sql-formatter" color="bg-pink-200" />
+              <ToolCard title="Cron Job Generator" description="Generate cron expressions." icon="fa-clock" to="/cron-generator" color="bg-amber-200" />
+            </div>
+          </div>
         </div>
       </section>
 
